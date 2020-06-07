@@ -109,3 +109,4 @@ yarn-error.log
 # End of https://www.toptal.com/developers/gitignore/api/node,vue,vuejs
 /frontend/node_modules/
 /frontend/node_modules/
+/backend/public/
