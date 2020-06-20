@@ -32,4 +32,12 @@
   body {
     font-size: .875rem;
   }
+  @font-face {
+    font-family: 'SCDream5';
+    src: url('./assets/SCDream5.otf');
+  }
+  @font-face {
+    font-family: 'SCDream6';
+    src: url('./assets/SCDream6.otf');
+  }
 </style>
