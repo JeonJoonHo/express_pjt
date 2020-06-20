@@ -1,17 +1,19 @@
 <template>
-    <li>
-        <h3>{{ title }}</h3>
-        <p>{{ description }}</p>
-    </li>
+    <p class="skill">
+        <span>{{ title }}</span>
+        <span>{{ level }}</span>
+    </p>
 </template>
 
 <script>
     export default {
         name: "Skill",
-        props: ['title', 'description']
+        props: ['title', 'level']
     }
 </script>
 
 <style scoped>
-
+    .skill {
+        text-align: left;
+    }
 </style>

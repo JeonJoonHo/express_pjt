@@ -1,17 +1,18 @@
 <template>
-    <div>
-        <h2 class="text-muted">Skill Set</h2>
-        <div class="table-responsive">
-            <ul>
+    <li>
+        <h3 class="skill-set-title pb-4 pt-4">{{ title }}</h3>
+        <div class="container">
+            <div class="row">
                 <Skill
+                        class="col-4"
                         v-for="skill in skills"
                         :key="skill.id"
                         v-bind:title="skill.title"
-                        v-bind:description="skill.description"
+                        v-bind:level="skill.level"
                 ></Skill>
-            </ul>
+            </div>
         </div>
-    </div>
+    </li>
 </template>
 
 <script>
@@ -19,12 +20,10 @@
 
     export default {
         name: "SkillSet",
-        components: {
-            Skill
-        },
+        components: { Skill },
         props: {
             title: String,
-            description: String
+            level: Number
         },
         data() {
             return {
@@ -33,17 +32,32 @@
                     {
                         id: 1,
                         title: 'Do the dishes',
-                        description: 'Test1'
+                        level: 1
                     },
                     {
                         id: 2,
                         title: 'Take out the trash',
-                        description: 'Test2'
+                        level: 1
                     },
                     {
                         id: 3,
                         title: 'Mow the lawn',
-                        description: 'Test3'
+                        level: 1
+                    },
+                    {
+                        id: 4,
+                        title: 'Mow the lawn',
+                        level: 1
+                    },
+                    {
+                        id: 5,
+                        title: 'Mow the lawn',
+                        level: 1
+                    },
+                    {
+                        id: 6,
+                        title: 'Mow the lawn',
+                        level: 1
                     }
                 ]
             }
@@ -52,5 +66,8 @@
 </script>
 
 <style scoped>
-
+    .skill-set-title {
+        font-family: SCDream5,serif;
+        text-align: left;
+    }
 </style>

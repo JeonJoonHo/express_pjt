@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h2 class="text-muted">Project</h2>
         <div class="table-responsive">
             <table class="table table-striped table-sm">
                 <thead>

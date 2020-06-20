@@ -1,30 +1,44 @@
 <template>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
-        </div>
+        <Section v-bind:section-title="'전 준호'">
+            <About></About>
+        </Section>
 
-        <SkillSet></SkillSet>
-        <Career></Career>
-        <Project></Project>
+        <Section v-bind:section-title="'Skill'">
+            <Technique></Technique>
+        </Section>
+
+        <hr>
+        <Section v-bind:section-title="'Career'">
+            <Career></Career>
+        </Section>
+
+        <hr>
+        <Section v-bind:section-title="'Project'">
+            <Project></Project>
+        </Section>
     </main>
 </template>
 
 <script>
-    import SkillSet from "./SkillSet";
     import Career from "./Career";
     import Project from "./Project";
+    import Technique from "./Technique";
+    import Section from "./Section";
 
     export default {
         name: "Main",
         components: {
-            SkillSet,
             Career,
-            Project
+            Project,
+            Technique,
+            Section
         }
     }
 </script>
 
-<style scoped>
-
+<style>
+    span, p {
+        font-family: SCDream5,serif;
+    }
 </style>
