@@ -25,6 +25,7 @@
     import Project from "./Project";
     import Technique from "./Technique";
     import Section from "./Section";
+    import About from "./About";
 
     export default {
         name: "Main",
@@ -32,7 +33,8 @@
             Career,
             Project,
             Technique,
-            Section
+            Section,
+            About
         }
     }
 </script>
