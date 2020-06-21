@@ -1,6 +1,6 @@
 <template>
     <section class="resume-section">
-        <div>
+        <div class="section-div">
             <h1 class="section-title pb-3">{{ sectionTitle }}</h1>
             <slot></slot>
         </div>
@@ -31,7 +31,7 @@
         padding: 5rem 1rem;
         max-width: 75rem;
     }
-    div {
+    .section-div {
         width: 100%;
     }
     .section-title {

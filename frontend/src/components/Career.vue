@@ -1,12 +1,12 @@
 <template>
     <div>
-        <div class="table-responsive">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5 text-left">
+            <div class="flex-grow-1">
+                <h3 class="mb-0">Senior Web Developer</h3>
+                <div class="subheading mb-3">Intelitec Solutions</div>
+                <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+            </div>
+            <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
         </div>
     </div>
 </template>
