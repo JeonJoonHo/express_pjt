@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <div class="container-fluid">
-      <div class="row">
+    <b-container fluid>
+      <div class="row" id="scrollspy-nested">
         <Sidebar></Sidebar>
         <Main></Main>
       </div>
-    </div>
+    </b-container>
   </div>
 </template>
 
@@ -22,6 +22,7 @@
 </script>
 
 <style>
+  html { scroll-behavior: smooth; }
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

@@ -1,44 +1,14 @@
 <template>
   <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="sidebar-sticky pt-3">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">
-            <span data-feather="home"></span>
-            Dashboard <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="file"></span>
-            Orders
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="shopping-cart"></span>
-            Products
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="users"></span>
-            Customers
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="bar-chart-2"></span>
-            Reports
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="layers"></span>
-            Integrations
-          </a>
-        </li>
-      </ul>
+      <b-navbar v-b-scrollspy class="flex-column">
+        <b-nav vertical>
+          <b-nav-item href="#about">ABOUT</b-nav-item>
+          <b-nav-item href="#skill">SKILL</b-nav-item>
+          <b-nav-item href="#career">CAREER</b-nav-item>
+          <b-nav-item href="#project">PROJECT</b-nav-item>
+        </b-nav>
+      </b-navbar>
     </div>
   </nav>
 </template>
@@ -58,8 +28,8 @@ export default {
     top: 0;
     bottom: 0;
     left: 0;
-    z-index: 100; /* Behind the navbar */
-    padding: 48px 0 0; /* Height of navbar */
+    z-index: 100;
+    padding: 20% 0 0;
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
   }
 
@@ -73,7 +43,7 @@ export default {
     position: relative;
     top: 0;
     height: calc(100vh - 48px);
-    padding-top: .5rem;
+    padding-top: .10rem;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   }
@@ -88,15 +58,12 @@ export default {
   .sidebar .nav-link {
     font-weight: 500;
     color: #333;
+    font-size: larger;
   }
 
   .sidebar .nav-link .feather {
     margin-right: 4px;
     color: #999;
-  }
-
-  .sidebar .nav-link.active {
-    color: #007bff;
   }
 
   .sidebar .nav-link:hover .feather,
@@ -107,5 +74,12 @@ export default {
   .sidebar-heading {
     font-size: .75rem;
     text-transform: uppercase;
+  }
+
+  .sidebar .nav-link {
+    color: darkgrey;
+  }
+  .active {
+    color: black !important;
   }
 </style>
