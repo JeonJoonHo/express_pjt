@@ -16,7 +16,7 @@
             <a class="social-icon" href="https://www.linkedin.com/in/joonho-jeon-921273154">
                 <font-awesome-icon :icon="faLinkedin"></font-awesome-icon>
             </a>
-            <a class="social-icon" href="#">
+            <a class="social-icon" href="mailto:jeon9435@gmail.com">
                 <font-awesome-icon :icon="faEnvelope"></font-awesome-icon>
             </a>
         </div>
