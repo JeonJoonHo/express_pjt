@@ -1,10 +1,10 @@
 var express = require('express');
 var welcome = require('./routes/welcome');
-var users = require('./routes/users');
+var skills = require('./routes/skills')
 
 var app = express();
 
 app.use('/welcome', welcome);
-app.use('/users', users);
+app.use('/skills', skills);
 
 module.exports = app;
