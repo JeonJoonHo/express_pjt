@@ -9,6 +9,4 @@ RUN npm install
 
 ENV NODE_ENV development
 
-EXPOSE 3000 80
-
-CMD ["npm", "start"]
+CMD ["npm", "run", "debug"]
