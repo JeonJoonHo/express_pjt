@@ -39,7 +39,15 @@ module.exports = (sequelize, DataTypes) => {
   };
   Skill.groupByType = async function (skills) {
     return skills.reduce(function(rv, x) {
-      (rv[x.type] = rv[x.type] || []).push(x);
+      if (rv[x.getDataValue("type")] === undefined) {
+        rv[x.getDataValue("type")] = {
+          title: x.type,
+          skills: []
+        }
+      }
+
+      rv[x.getDataValue("type")]['skills'].push(x.get('defaultInfo'));
+      // (rv[x.getDataValue("type")][skills] = rv[x.getDataValue("type")][skills] || []).push(x);
       return rv;
     }, {});
   }

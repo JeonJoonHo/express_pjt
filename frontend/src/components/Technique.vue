@@ -3,9 +3,10 @@
         <ul class="list-group list-group-flush">
             <SkillSet
                     class="list-group-item"
-                    v-for="skillSet in skillSets"
-                    :key="skillSet.id"
-                    v-bind:title="skillSet.title"
+                    v-for="technique in techniques"
+                    :key="technique.id"
+                    v-bind:title="technique.title"
+                    v-bind:skills="technique.skills"
             ></SkillSet>
         </ul>
     </div>
@@ -25,21 +26,23 @@
         data() {
             return {
                 newTodoText: '',
-                skillSets: [
-                    {
-                        id: 1,
-                        title: 'Backend'
-                    },
-                    {
-                        id: 2,
-                        title: 'Frontend'
-                    },
-                    {
-                        id: 3,
-                        title: 'Etc'
-                    }
-                ]
+                techniques: {}
             }
+        },
+        methods: {
+            getSkills () {
+                this.$http.get('http://localhost:3000/api/skills')
+                    .then((response) => {
+                        console.log(response.data)
+                        this.techniques = response.data.skills
+                    })
+                    .catch(e => {
+                        console.log('error : ', e)
+                    })
+            }
+        },
+        mounted() {
+            this.getSkills();
         }
     }
 </script>

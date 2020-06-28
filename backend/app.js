@@ -8,6 +8,8 @@ var configs = require('./config/index');
 var models = require('./models/index');
 
 var app = express();
+var cors = require('cors');
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

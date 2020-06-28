@@ -4,17 +4,17 @@
             <About></About>
         </Section>
 
-        <Section v-bind:section-title="'Skill'" id="skill">
+        <Section v-bind:section-title="'SKILL'" id="skill">
             <Technique></Technique>
         </Section>
 
         <hr>
-        <Section v-bind:section-title="'Career'" id="career">
+        <Section v-bind:section-title="'CAREER'" id="career">
             <Career></Career>
         </Section>
 
         <hr>
-        <Section v-bind:section-title="'Project'" id="project">
+        <Section v-bind:section-title="'PROJECT'" id="project">
             <Project></Project>
         </Section>
     </main>

@@ -1,14 +1,17 @@
 <template>
     <p class="skill">
-        <span>{{ title }}</span>
-        <span>{{ level }}</span>
+        <span>{{ term }}</span>
+        <span>{{ proficiency }}</span>
     </p>
 </template>
 
 <script>
     export default {
         name: "Skill",
-        props: ['title', 'level']
+        props: {
+            term: String,
+            proficiency: Number
+        }
     }
 </script>
 
