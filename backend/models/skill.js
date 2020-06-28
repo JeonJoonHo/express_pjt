@@ -37,5 +37,11 @@ module.exports = (sequelize, DataTypes) => {
   Skill.associate = function(models) {
     // associations can be defined here
   };
+  Skill.groupByType = async function (skills) {
+    return skills.reduce(function(rv, x) {
+      (rv[x.type] = rv[x.type] || []).push(x);
+      return rv;
+    }, {});
+  }
   return Skill;
 };

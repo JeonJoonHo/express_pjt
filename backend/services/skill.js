@@ -8,6 +8,7 @@ export default class SkillService {
     }
 
     async getSkills() {
-        return await Skill.findAll().map(result => result.get('defaultInfo'))
+        let skills = await this.skillModel.findAll().map(result => result.get('defaultInfo'))
+        return Skill.groupByType(skills)
     }
 }
